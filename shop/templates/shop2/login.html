@@ -1,0 +1,22 @@
+{% load static %}
+<script>
+$(document).ready(function(){
+    $('#login_form > input[type="button"]').click(function(){
+        $('#login_form').attr({
+            'action':'{% url "loginimpl" %}',
+            'method':'POST'
+        });
+        $('#login_form').submit();
+    });
+});
+</script>
+
+<section>
+    <h1>LOGIN PAGE</h1>
+    <form id="login_form">
+        {% csrf_token %}
+        ID<input type="text" name="id"><br>
+        PWD<input type="password" name="pwd"><br>
+        <input type="button" value="LOGIN"><br>
+    </form>
+</section>

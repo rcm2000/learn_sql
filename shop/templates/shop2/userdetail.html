@@ -1,0 +1,10 @@
+{% load static  %}
+
+<section>
+      <h1>User Detail</h1>
+      <h2>ID: {{rsuser.id}}</h2>
+      <h2>PWD: {{rsuser.pwd}}</h2>
+      <h2>NAME: {{rsuser.name}}</h2>
+      <a href="{% url 'userdelete' %}?id={{rsuser.id}}">DELETE</a>
+      <a href="{% url 'userupdate' %}?id={{rsuser.id}}">UPDATE</a>
+</section>

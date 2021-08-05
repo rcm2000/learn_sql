@@ -1,0 +1,12 @@
+{% load static  %}
+
+<section>
+      <h1>User Add</h1>
+      <form action="{% url 'useraddimpl' %}" method="post">
+            {% csrf_token %}
+            ID<input type="text" name="id"><br>
+            PWD<input type="text" name="pwd"><br>
+            NAME<input type="text" name="name"><br>
+            <input type="submit" value="REGISTER">
+      </form>
+</section>

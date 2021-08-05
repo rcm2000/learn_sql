@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>CUST UPDATE PAGE</h1>
+  <form action="{% url 'custupdateimpl' %}" method="post">
+            {% csrf_token %}
+            ID<input type="text" name="id" readonly = 'true' value="{{c.id}}"><br>
+            PWD<input type="text" name="pwd"><br>
+            NAME<input type="text" name="name"><br>
+            <input type="submit" value="UPDATE">
+            <h3>{{error}}</h3>
+  </form>
+</body>
+</html>

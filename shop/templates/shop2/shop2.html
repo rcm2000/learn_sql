@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+    <style>
+        header > h1 > a{
+            color: white;
+        }
+        section > h3 >a> img{
+            width:50px;
+        }
+    </style>
+    <header>
+        <h1><a href="{% url 'shop2' %}">Naningu.com</a></h1>
+    </header>
+    <nav id="login_nav">
+        {% if request.session.suser == None %}
+            <ul>
+                <li><a href="{% url 'login' %}">LOGIN</a></li>
+                <li><a href="{% url 'useradd' %}">REGISTER</a></li>
+                <li><a href="{% url 'itemlist' %}">ABOUT US</a></li>
+            </ul>
+        {% else %}
+             <ul>
+                 <li><a href="{% url 'login' %}">{{request.session.suser.id}}</a></li>
+                 <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+                 <li><a href="{% url 'itemlist' %}">ABOUT US</a></li>
+             </ul>
+        {% endif %}
+    </nav>
+    <nav id="main_nav">
+        <ul>
+            <li><a href="{% url 'userlist' %}">User List</a></li>
+            <li><a href="{% url 'useradd' %}">User Add</a></li>
+            <li><a href="{% url 'itemlist' %}">Item List</a></li>
+            <li><a href="{% url 'itemadd' %}">Item Add</a></li>
+        </ul>
+    </nav>
+    {% if  section != None  %}
+        {% include  section %}
+    {% else %}
+        {% include  "shop2/mainsection.html" %}
+    {% endif%}
+
+    <footer></footer>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,60 @@
+/* 2021 01 26 jmlee */
+
+        *{
+            margin:0;
+            padding:0;
+        }
+        a{
+            text-decoration:none;
+            color:black;
+        }
+        ul, ol{
+            list-style:none;
+        }
+
+        header{
+            width: 900px;
+            height:150px;
+            background:black;
+            color:white;
+            text-align:center;
+            margin:0 auto;
+            line-height: 150px;
+            font-size:1.5em;
+        }
+        nav{
+            width: 900px;
+            height:50px;
+            line-height: 50px;
+            margin:0 auto;
+            border-bottom:2px solid black;
+        }
+        nav > ul{
+            width: 600px;
+            margin:0 auto;
+        }
+        nav > ul > li{
+            float:left;
+        }
+        nav > ul > li > a{
+            display: block;
+            width:150px;
+            font-size:1.5em;
+            text-align:center;
+        }
+        nav > ul > li > a:hover{
+            color:yellow;
+            background:black;
+        }
+        section{
+            width:900px;
+            height :900px;
+            background:gray;
+            margin:0 auto;
+        }
+        footer{
+            width:900px;
+            height:30px;
+            background:black;
+            margin:0 auto;
+        }

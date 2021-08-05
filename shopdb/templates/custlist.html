@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>CUST LIST Page</h1>
+    {% for u in cl %}
+    <h3><a href="{% url 'custdetail' %}?id={{ u.id }}">{{ u.id }}</a>,{{ u.name }}</h3>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% load static  %}
+
+<section>
+      <h1>User Update</h1>
+      <form action="{% url 'userupdateimpl' %}" method="post">
+            {% csrf_token %}
+            ID<input type="text" name="id" value="{{uuser.id}}" readonly="true"><br>
+            PWD<input type="text" name="pwd" value="{{uuser.pwd}}"><br>
+            NAME<input type="text" name="name" value="{{uuser.name}}"><br>
+            <input type="submit" value="UPDATE">
+      </form>
+</section>

@@ -1,0 +1,11 @@
+{% load static  %}
+
+<section>
+      <h1>Item List</h1>
+      {% for i in itemlist %}
+      <h3>
+            <a href="{% url 'itemdetail' %}?id={{i.id}}"><img src="static/img/{{i.imgname}}">
+            {{i.name}},{{i.price}},{{i.regdate}}</a>
+      </h3>
+      {% endfor %}
+</section>

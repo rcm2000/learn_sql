@@ -1,0 +1,8 @@
+{% load static  %}
+
+<section>
+    <h1>User List</h1>
+    {% for u in rsusers %}
+    <h3><a href="{% url 'userdetail' %}?id={{ u.id }}">{{ u.id }}</a>,{{ u.name }}</h3>
+    {% endfor %}
+</section>
